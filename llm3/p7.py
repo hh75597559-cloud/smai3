@@ -10,7 +10,7 @@ st.sidebar.markdown("Clicked Page 7")
 
 # Page
 st.title("Page 7 ")
-
+cd
 system= st.text_input("SYSTEM",placeholder="system 을 입력")
 text=st.text_input("질문을 입력",placeholder="질문을 입력")
 

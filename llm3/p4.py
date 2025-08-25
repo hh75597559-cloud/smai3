@@ -5,8 +5,8 @@ from click import prompt
 
 
 from MyLLM import geminiTxt, geminiModel
-from llm3.MyLLM import progressBar
-from llm3.p1 import my_bar
+from MyLLM import progressBar
+
 
 # sidebar
 st.sidebar.markdown("Clicked Page 4")
