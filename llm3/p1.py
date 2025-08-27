@@ -19,3 +19,7 @@ if st.button("SEND"):
         st.info(result)
     else:
         st.info("질문을 입력 하세요")
+
+
+
+

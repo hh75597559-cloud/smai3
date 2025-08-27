@@ -20,7 +20,6 @@ if file:
                         placeholder="질문을 입력 하세요")
 # OpenAI에게 물어 본다.
     if st.button("SEND"):
-
         base64img = encode_image("img/"+file.name)
         model = openAiModel()
         my_bar = progressBar("Operation in progress. Please wait.")
@@ -42,5 +41,14 @@ if file:
 # 결과를 출력하고
 # 음성으로 안내한다
         st.info(response.choices[0].message.content)
-        makeAudio(response.choices[0].message.content, "result.mp3")
-        st.audio("audio/result.mp3", autoplay=True, width=1)
+        makeAudio(response.choices[0].message.content, "imgresult.mp3")
+        st.audio("audio/imgresult.mp3", autoplay=True, width=1)
+
+
+
+
+
+
+
+
+

@@ -1,32 +1,19 @@
-import google.generativeai as genai
+from myllm.MyApi import geminiModel
+
+def test(txt):
+    model = geminiModel()
+    response = model.generate_content(txt)
+    return response.text
+
+if __name__ == '__main__':
+    while True:
+        txt = input(" 질문을 입력 하세요 (q)")
+        if txt == "q":
+            break
+        result = test(txt)
+        print(result)
 
 
-from dotenv import load_dotenv
-import os
 
 
-load_dotenv()
 
-GOOGLE_API_KEY=os.getenv("GOOGLE_API_KEY")
-genai.configure(api_key=GOOGLE_API_KEY)
-
-model = genai.GenerativeModel("gemini-2.0-flash")
-
-chat = model.start_chat(history=[])
-
-print("\n--- Gemini 챗봇 시작 ---")
-
-while True:
-
-        user_message = input("나: ")
-
-        if user_message.lower() == '종료':
-
-                break
-
-        response = chat.send_message(user_message)
-
-        print("Gemini:", response.text)
-
-print("--- 챗봇 종료 ---")
-print(chat.history)

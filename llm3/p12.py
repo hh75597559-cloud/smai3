@@ -1,9 +1,7 @@
-import time
-
 import streamlit as st
 from PIL import Image
 
-from MyLLM import geminiTxt, progressBar, save_uploadedfile, makeImages
+from MyLLM import save_uploadedfile, progressBar, makeImages
 
 # Sidebar
 st.sidebar.markdown("Clicked Page 12")

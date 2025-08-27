@@ -1,5 +1,4 @@
-from myllm.Myapi import openAiModelArg, makeMsg
-
+from myllm.MyApi import openAiModelArg, makeMsg
 
 def test():
     response = openAiModelArg("gpt-4o",
